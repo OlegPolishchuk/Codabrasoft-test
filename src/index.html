@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+<body>
+<form name="form" class="form">
+  <label>
+    Имя
+    <input class="error error__input" type="text" name="name"/>
+    <span class="error error__message">Некорректное имя</span>
+  </label>
+  <label>
+    Фамилия
+    <input type="text" name="secondName"/>
+  </label>
+  <label>
+    Дата рождения
+    <input type="date" name="dateOfBirth"/>
+  </label>
+  <label>
+    Электронная почта
+    <input type="email" name="email"/>
+  </label>
+  <label>
+    Пароль
+    <input type="password" name="password"/>
+  </label>
+  <label>
+    Подтверждение пароля
+    <input type="password" name="confirmedPassword"/>
+  </label>
+</form>
+</body>
+</html>

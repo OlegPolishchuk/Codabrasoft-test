@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'normalize.css';
+
+
+:root {
+  --color-text: #343a40;
+  --color-error: #FA5252FF;
+  --color-border: #ced4da;
+  --colo-border-hover: #228be6;
+
+  --border-input: 1px solid #ced4da;
+
+  --radius: 4px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--color-text);
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 8px;
+  border-radius: var(--radius);
+  border: var(--border-input);
+}
+
+
+input:focus {
+  outline: none;
+  border-color: var(--colo-border-hover);
+}
+
+.form {
+  min-width: 350px;
+  padding: 15px;
+  border-radius: var(--radius);
+}
+
+.form > label {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 25px;
+
+  position: relative;
+}
+
+.form > label:last-child {
+  margin-bottom: 0;
+}
+
+.error {
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.error__message {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+
+  font-size: 12px;
+}
+
+.error__input {
+
+}
