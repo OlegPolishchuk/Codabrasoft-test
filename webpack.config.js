@@ -8,7 +8,7 @@ const devMode = mode === 'development';
 module.exports = {
   mode,
   devServer: {
-    // hot: true,
+    hot: true,
   },
   entry: path.resolve(__dirname, './src/scripts/main.js'),
   output: {

@@ -1,38 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
 </head>
 <body>
-<form name="form" class="form">
-  <label>
-    Имя
-    <input class="error error__input" type="text" name="name"/>
-    <span class="error error__message">Некорректное имя</span>
-  </label>
-  <label>
-    Фамилия
-    <input type="text" name="secondName"/>
-  </label>
-  <label>
-    Дата рождения
-    <input type="date" name="dateOfBirth"/>
-  </label>
-  <label>
-    Электронная почта
-    <input type="email" name="email"/>
-  </label>
-  <label>
-    Пароль
-    <input type="password" name="password"/>
-  </label>
-  <label>
-    Подтверждение пароля
-    <input type="password" name="confirmedPassword"/>
-  </label>
-</form>
+  <div class="wrapper">
+    <form name="loginForm" class="form" novalidate>
+      <label class="form__label">
+        Имя
+        <input type="text" name="name"/>
+      </label>
+      <label class="form__label">
+        Фамилия
+        <input type="text" name="lastName"/>
+      </label>
+      <label class="form__label">
+        Дата рождения
+        <input type="date" name="dateOfBirth"/>
+      </label>
+      <label class="form__label">
+        Электронная почта
+        <input type="email" name="email" />
+      </label>
+      <label class="form__label">
+        Пароль
+        <input type="password" name="password"/>
+      </label>
+      <label class="form__label">
+        Подтверждение пароля
+        <input type="password" name="confirmPassword" />
+      </label>
+      <button class="button" type="submit" id="sendBtn">Вход</button>
+    </form>
+  </div>
+
 </body>
 </html>
