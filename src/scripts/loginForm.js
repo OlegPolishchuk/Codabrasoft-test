@@ -34,8 +34,6 @@ form.addEventListener('click', handleClearErrorMessage)
 function sendData(event) {
   event.preventDefault();
 
-  console.log('click')
-
   const validatedInputs = [
     validateLength(nameInput),
     validateLength(lastNameInput),
