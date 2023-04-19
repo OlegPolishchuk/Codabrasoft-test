@@ -20,7 +20,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
       filename: "index.html",
-      title: "Codabrasoft"
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'

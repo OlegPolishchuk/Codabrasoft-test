@@ -19,6 +19,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
+    "crypto-js": "^4.1.1",
     "normalize.css": "^8.0.1"
   }
 }

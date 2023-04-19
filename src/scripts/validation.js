@@ -12,7 +12,7 @@ export const validation = {
   validateRequired(inputs) {
     let errorsCount = 0;
 
-    for(let input of inputs) {
+    inputs.forEach(input => {
       const isValid = input.value.trim().length > 0;
 
       if (!isValid) {
@@ -20,7 +20,7 @@ export const validation = {
         setErrorMessage(input, requiredErrorMessage);
         errorsCount++;
       }
-    }
+    })
 
     return errorsCount === 0;
   },
@@ -43,24 +43,26 @@ export const validation = {
     const today = new Date();
 
     if (new Date(input.value) > today) {
-      console.log('date is invalid')
       setErrorMessage(input, dateErrorMessage)
       return false;
     }
+
+    clearErrorMessage(input);
     return true;
   },
 
   validateEmail(input) {
     const value = input.value;
+    const isValid = emailRegExp.test(value);
 
-    if (!emailRegExp.test(value)) {
+    if (!isValid) {
       clearErrorMessage(input);
       setErrorMessage(input, emailErrorMessage);
 
       return false;
     }
 
-    return true;
+    return isValid;
   },
 
   validatePassword(input) {
